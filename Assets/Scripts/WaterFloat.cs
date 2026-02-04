@@ -1,136 +1,123 @@
-using Ditzelgames;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
 public class WaterFloat : MonoBehaviour
 {
-    //public properties
-    public float AirDrag = 1;
-    public float WaterDrag = 10;
-    public bool AffectDirection = true;
-    public bool AttachToSurface = false;
+    [Header("Float Settings")]
     public Transform[] FloatPoints;
 
-    //used components
-    protected Rigidbody Rigidbody;
-    protected Waves Waves;
+    [Header("Forces")]
+    public float buoyancyForce = 15f;
+    public float waterDrag = 5f;
+    public float airDrag = 0.5f;
 
-    //water line
-    protected float WaterLine;
-    protected Vector3[] WaterLinePoints;
+    [Header("Gizmos")]
+    public bool drawGizmos = true;
+    public float gizmoPointSize = 0.15f;
+    public float gizmoNormalLength = 1.5f;
 
-    //help Vectors
-    protected Vector3 smoothVectorRotation;
-    protected Vector3 TargetUp;
-    protected Vector3 centerOffset;
+    Rigidbody rb;
+    OceanController ocean;
 
-    public Vector3 Center { get { return transform.position + centerOffset; } }
+    // Debug data
+    Vector3 avgNormal;
+    float[] waterHeights;
 
-    // Start is called before the first frame update
     void Awake()
     {
-        //get components
-        Waves = FindObjectOfType<Waves>();
-        Rigidbody = GetComponent<Rigidbody>();
-        Rigidbody.useGravity = false;
+        rb = GetComponent<Rigidbody>();
+        rb.useGravity = true;
 
-        //compute center
-        WaterLinePoints = new Vector3[FloatPoints.Length];
-        for (int i = 0; i < FloatPoints.Length; i++)
-            WaterLinePoints[i] = FloatPoints[i].position;
-        centerOffset = PhysicsHelper.GetCenter(WaterLinePoints) - transform.position;
+        ocean = FindFirstObjectByType<OceanController>();
 
+        waterHeights = new float[FloatPoints.Length];
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        //default water surface
-        var newWaterLine = 0f;
-        var pointUnderWater = false;
+        if (ocean == null || FloatPoints.Length == 0) return;
 
-        //set WaterLinePoints and WaterLine
+        avgNormal = Vector3.zero;
+        int pointsUnderWater = 0;
+
         for (int i = 0; i < FloatPoints.Length; i++)
         {
-            //height
-            WaterLinePoints[i] = FloatPoints[i].position;
-            WaterLinePoints[i].y = Waves.GetHeight(FloatPoints[i].position);
-            newWaterLine += WaterLinePoints[i].y / FloatPoints.Length;
-            if (WaterLinePoints[i].y > FloatPoints[i].position.y)
-                pointUnderWater = true;
-        }
+            Transform point = FloatPoints[i];
+            Vector3 pos = point.position;
 
-        var waterLineDelta = newWaterLine - WaterLine;
-        WaterLine = newWaterLine;
+            float waterHeight = ocean.GetWaterHeight(pos);
+            waterHeights[i] = waterHeight;
 
-        //compute up vector
-        TargetUp = PhysicsHelper.GetNormal(WaterLinePoints);
-
-        //gravity
-        var gravity = Physics.gravity;
-        Rigidbody.linearDamping = AirDrag;
-        if (WaterLine > Center.y)
-        {
-            Rigidbody.linearDamping = WaterDrag;
-            //under water
-            if (AttachToSurface)
+            if (pos.y < waterHeight)
             {
-                //attach to water surface
-                Rigidbody.position = new Vector3(Rigidbody.position.x, WaterLine - centerOffset.y, Rigidbody.position.z);
-            }
-            else
-            {
-                //go up
-                gravity = AffectDirection ? TargetUp * -Physics.gravity.y : -Physics.gravity;
-                transform.Translate(Vector3.up * waterLineDelta * 0.9f);
+                float depth = waterHeight - pos.y;
+
+                rb.AddForceAtPosition(
+                    Vector3.up * depth * buoyancyForce,
+                    pos,
+                    ForceMode.Force
+                );
+
+                avgNormal += ocean.GetWaterNormal(pos);
+                pointsUnderWater++;
             }
         }
-        Rigidbody.AddForce(gravity * Mathf.Clamp(Mathf.Abs(WaterLine - Center.y),0,1));
 
-        //rotation
-        if (pointUnderWater)
+        if (pointsUnderWater > 0)
         {
-            //attach to water surface
-            TargetUp = Vector3.SmoothDamp(transform.up, TargetUp, ref smoothVectorRotation, 0.2f);
-            Rigidbody.rotation = Quaternion.FromToRotation(transform.up, TargetUp) * Rigidbody.rotation;
-        }
+            avgNormal.Normalize();
 
+            Quaternion targetRotation =
+                Quaternion.FromToRotation(transform.up, avgNormal) * rb.rotation;
+
+            rb.rotation = Quaternion.Slerp(
+                rb.rotation,
+                targetRotation,
+                Time.fixedDeltaTime * 2f
+            );
+
+            rb.linearDamping = waterDrag;
+        }
+        else
+        {
+            rb.linearDamping = airDrag;
+        }
     }
 
-    private void OnDrawGizmos()
+    void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
-        if (FloatPoints == null)
-            return;
+        if (!drawGizmos || FloatPoints == null) return;
 
+        // Float points & water surface
         for (int i = 0; i < FloatPoints.Length; i++)
         {
-            if (FloatPoints[i] == null)
-                continue;
+            Transform point = FloatPoints[i];
+            if (point == null) continue;
 
-            if (Waves != null)
-            {
-
-                //draw cube
-                Gizmos.color = Color.red;
-                Gizmos.DrawCube(WaterLinePoints[i], Vector3.one * 0.3f);
-            }
-
-            //draw sphere
+            // Float point
             Gizmos.color = Color.green;
-            Gizmos.DrawSphere(FloatPoints[i].position, 0.1f);
+            Gizmos.DrawSphere(point.position, gizmoPointSize);
 
+            if (Application.isPlaying && ocean != null)
+            {
+                Vector3 waterPos = point.position;
+                waterPos.y = waterHeights[i];
+
+                // Water surface sample
+                Gizmos.color = Color.red;
+                Gizmos.DrawCube(waterPos, Vector3.one * gizmoPointSize);
+
+                // Line to water
+                Gizmos.color = Color.white;
+                Gizmos.DrawLine(point.position, waterPos);
+            }
         }
 
-        //draw center
-        if (Application.isPlaying)
+        // Average normal
+        if (Application.isPlaying && avgNormal != Vector3.zero)
         {
-            Gizmos.color = Color.red;
-            Gizmos.DrawCube(new Vector3(Center.x, WaterLine, Center.z), Vector3.one * 1f);
-            Gizmos.DrawRay(new Vector3(Center.x, WaterLine, Center.z), TargetUp * 1f);
+            Gizmos.color = Color.cyan;
+            Gizmos.DrawRay(transform.position, avgNormal * gizmoNormalLength);
         }
     }
 }
