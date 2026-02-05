@@ -11,8 +11,10 @@ public class BoatController : MonoBehaviour
     [SerializeField] float turnSpeed = 1.5f; 
     [SerializeField] float minTurnSpeed = 0.5f; 
     [SerializeField] float maxSpeed = 15f;
+    
     [SerializeField] float linearDrag = 1f;
     [SerializeField] float angularDrag = 2f;
+    public bool isSprinting = false;
     
     
     float horizontal;
@@ -35,13 +37,15 @@ public class BoatController : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
+        isSprinting = Input.GetKey(KeyCode.LeftShift);
     }
 
     private void FixedUpdate()
     {
-        if (boatRb.linearVelocity.magnitude < maxSpeed)
+        float sprintMultiplicator = isSprinting ? 1.75f : 1f;
+        if (boatRb.linearVelocity.magnitude < maxSpeed * sprintMultiplicator)
         {
-            boatRb.AddForce(transform.forward * (vertical * moveSpeed));
+            boatRb.AddForce(transform.forward * (vertical * moveSpeed * sprintMultiplicator));
         }
         
         float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / maxSpeed);
