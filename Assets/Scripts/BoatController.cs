@@ -11,7 +11,8 @@ public class BoatController : MonoBehaviour
     [SerializeField] float turnSpeed = 1.5f; 
     [SerializeField] float minTurnSpeed = 0.5f; 
     [SerializeField] float maxSpeed = 15f;
-    
+
+    [SerializeField] float backMultiplicator = 0.5f;
     [SerializeField] float linearDrag = 1f;
     [SerializeField] float angularDrag = 2f;
     public bool isSprinting = false;
@@ -42,6 +43,7 @@ public class BoatController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(vertical < 0) vertical *= backMultiplicator;
         float sprintMultiplicator = isSprinting ? 1.75f : 1f;
         if (boatRb.linearVelocity.magnitude < maxSpeed * sprintMultiplicator)
         {
