@@ -33,11 +33,19 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _SampleTexture2D_1b6393cca40f4910a4a9833ae2789b9e_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 7f3a5d49bf7c01e42adf3d02d019bfdc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_1d363912605c4ead8c5110b5f300c1ef_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 4340ed95230eea4429fa1f04a55a78b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_3002185627d6472cb3c577393662b333_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 7f3a5d49bf7c01e42adf3d02d019bfdc, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_814741dc962c4492ba13b48b7947ab40_Texture_1_Texture2D:
         m_Texture: {fileID: 2800000, guid: 7f3a5d49bf7c01e42adf3d02d019bfdc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -60,16 +68,16 @@ Material:
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
     - _BlendMode: 0
-    - _Blur: 1.86
+    - _Blur: 0.97
     - _Caustic_Deformation: 4.9
-    - _Caustic_Size: 1.1
+    - _Caustic_Size: 2.4
     - _Caustic_Speed: 0.03
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
-    - _Depth: 1.01
+    - _Depth: 0.85
     - _DepthOffsetEnable: 0
-    - _Depth_Gradient: -0.37
+    - _Depth_Gradient: -0.19
     - _Depth_Level: -0.18
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
@@ -87,6 +95,7 @@ Material:
     - _Foam_Threshold: 0.867
     - _Foam_Threshold_2: 0
     - _Foam_Tiling: 8.53
+    - _If_Transp_Global: 0
     - _MaterialID: 1
     - _MaterialTypeMask: 2
     - _OpaqueCullMode: 2
@@ -98,7 +107,7 @@ Material:
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
     - _Sine_Amplitude: 0.02
-    - _Sine_Caustic_Amplitude: 0.05
+    - _Sine_Caustic_Amplitude: 0.04
     - _Sine_Caustic_Speed: 2
     - _Sine_Caustic_mplitude: 0.05
     - _Sine_Foam_Amplitude: 0.5
@@ -121,7 +130,7 @@ Material:
     - _SurfaceType: 1
     - _Threshold: 0.523
     - _TransmissionEnable: 1
-    - _Transparency: 0.114
+    - _Transparency: 0
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -138,9 +147,9 @@ Material:
     - _foamTiling: 6.88
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _Down_Color: {r: 0.094117135, g: 0.35329008, b: 0.4433962, a: 1}
+    - _Down_Color: {r: 0.09411711, g: 0.35329005, b: 0.44339618, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Up_Color: {r: 0.17372729, g: 0.6037736, b: 0.6037736, a: 1}
+    - _Up_Color: {r: 0.17372718, g: 0.6037736, b: 0.6037736, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5359707168883102370
