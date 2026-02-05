@@ -280,6 +280,7 @@ MonoBehaviour:
   turnSpeed: 5
   minTurnSpeed: 1
   maxSpeed: 30
+  backMultiplicator: 0.3
   linearDrag: 1
   angularDrag: 2
   isSprinting: 0
