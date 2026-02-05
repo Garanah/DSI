@@ -21,6 +21,7 @@ public class OceanController : MonoBehaviour
             Shader.SetGlobalVector($"_OctaveScale{i}", octaves[i].scale);
             Shader.SetGlobalVector($"_OctaveSpeed{i}", octaves[i].speed);
             Shader.SetGlobalFloat($"_OctaveHeight{i}", octaves[i].height);
+            Shader.SetGlobalVector($"_OctaveDir{i}", octaves[i].dir);
             //Shader.SetGlobalFloat($"_OctaveAlternate{i}", octaves[i].alternate ? 1f : 0f);
             
             //Debug.Log($"[OceanController] Octave {i} - Scale: {octaves[i].scale} Speed: {octaves[i].speed} Height: {octaves[i].height} Alternate: {octaves[i].alternate}");
@@ -77,5 +78,6 @@ public class OceanController : MonoBehaviour
         public Vector2 speed;
         public float height;
         public bool alternate;
+        public Vector2 dir;
     }
 }
