@@ -4489,7 +4489,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1b02cb73414d12e4d80b3e9ad177dd6d, type: 2}
+  - {fileID: 2100000, guid: ea45dc4ebb2dab44d9dc2fd0cad243c3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -15555,6 +15555,10 @@ MonoBehaviour:
   offset: {x: 0, y: 26, z: -26}
   smoothFollow: 5
   lookAtHeight: 7.5
+  sprintOffset: {x: 0, y: 6, z: -12}
+  sprintSmoothFollow: 8
+  sprintLookAtHeight: 2.5
+  transitionSpeed: 3
   boatController: {fileID: 1149449405}
 --- !u!1 &1320680855
 GameObject:
