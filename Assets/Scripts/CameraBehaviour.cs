@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CameraBehaviour : MonoBehaviour
@@ -29,22 +30,43 @@ public class CameraBehaviour : MonoBehaviour
         currentSmoothFollow = smoothFollow;
         currentLookAtHeight = lookAtHeight;
     }
+    
 
     void LateUpdate()
     {
         if (target == null) return;
+        if (boatController.currentMovementMode == CurrentMovementMode.Normal)
+        {
+            Vector3 targetOffset = boatController.isSprinting ? sprintOffset : offset;
+            float targetSmoothFollow = boatController.isSprinting ? sprintSmoothFollow : smoothFollow;
+            float targetLookAtHeight = boatController.isSprinting ? sprintLookAtHeight : lookAtHeight;
         
-        Vector3 targetOffset = boatController.isSprinting ? sprintOffset : offset;
-        float targetSmoothFollow = boatController.isSprinting ? sprintSmoothFollow : smoothFollow;
-        float targetLookAtHeight = boatController.isSprinting ? sprintLookAtHeight : lookAtHeight;
+            currentOffset = Vector3.Lerp(currentOffset, targetOffset, transitionSpeed * Time.deltaTime);
+            currentSmoothFollow = Mathf.Lerp(currentSmoothFollow, targetSmoothFollow, transitionSpeed * Time.deltaTime);
+            currentLookAtHeight = Mathf.Lerp(currentLookAtHeight, targetLookAtHeight, transitionSpeed * Time.deltaTime);
         
-        currentOffset = Vector3.Lerp(currentOffset, targetOffset, transitionSpeed * Time.deltaTime);
-        currentSmoothFollow = Mathf.Lerp(currentSmoothFollow, targetSmoothFollow, transitionSpeed * Time.deltaTime);
-        currentLookAtHeight = Mathf.Lerp(currentLookAtHeight, targetLookAtHeight, transitionSpeed * Time.deltaTime);
+            Vector3 desiredPosition = target.position + target.TransformDirection(currentOffset);
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, currentSmoothFollow * Time.deltaTime);
         
-        Vector3 desiredPosition = target.position + target.TransformDirection(currentOffset);
-        transform.position = Vector3.Lerp(transform.position, desiredPosition, currentSmoothFollow * Time.deltaTime);
+            transform.LookAt(target.position + Vector3.up * currentLookAtHeight);
+        }
+        else if (boatController.currentMovementMode == CurrentMovementMode.Constant)
+        {
+            MovementModeSpeed mode =  boatController.movementModes[boatController.currentSelectedMovementMode];
+            
+            Vector3 targetOffset = boatController.isSprinting ? mode.modeCamSprintOffset : mode.modeCamOffset;
+            float targetSmoothFollow = boatController.isSprinting ? mode.modeCamSprintSmoothFollow : mode.modeCamSmoothFollow;
+            float targetLookAtHeight = boatController.isSprinting ? mode.modeCamSprintLookAtHeight : mode.modeCamLookAtHeight;
         
-        transform.LookAt(target.position + Vector3.up * currentLookAtHeight);
+            currentOffset = Vector3.Lerp(currentOffset, targetOffset, transitionSpeed * Time.deltaTime);
+            currentSmoothFollow = Mathf.Lerp(currentSmoothFollow, targetSmoothFollow, transitionSpeed * Time.deltaTime);
+            currentLookAtHeight = Mathf.Lerp(currentLookAtHeight, targetLookAtHeight, transitionSpeed * Time.deltaTime);
+        
+            Vector3 desiredPosition = target.position + target.TransformDirection(currentOffset);
+            transform.position = Vector3.Lerp(transform.position, desiredPosition, currentSmoothFollow * Time.deltaTime);
+        
+            transform.LookAt(target.position + Vector3.up * currentLookAtHeight);
+        }
+        
     }
 }
