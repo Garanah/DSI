@@ -45,7 +45,7 @@ public class BoatController : MonoBehaviour
     {
         if(vertical < 0) vertical *= backMultiplicator;
         float sprintMultiplicator = isSprinting ? 1.75f : 1f;
-        if (boatRb.linearVelocity.magnitude < maxSpeed * sprintMultiplicator)
+        if (boatRb.linearVelocity.magnitude < maxSpeed * sprintMultiplicator || PositionFire.shooting!)
         {
             boatRb.AddForce(transform.forward * (vertical * moveSpeed * sprintMultiplicator));
         }
