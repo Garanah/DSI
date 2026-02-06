@@ -1,58 +1,131 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class BoatController : MonoBehaviour
 {
+    public CurrentMovementMode currentMovementMode;
+    public List<MovementModeSpeed>  movementModes;
+    public int currentSelectedMovementMode = 0;
+
     [Header("Components")]
     [SerializeField] Rigidbody boatRb;
-    
-    [Header("Movement Values")]
-    [SerializeField] float moveSpeed = 15f;
-    [SerializeField] float turnSpeed = 1.5f; 
-    [SerializeField] float minTurnSpeed = 0.5f; 
-    [SerializeField] float maxSpeed = 15f;
 
-    [SerializeField] float backMultiplicator = 0.5f;
+    [Header("Movement Values")] 
+    [SerializeField] float moveSpeed = 15f;
+    [SerializeField] float turnSpeed = 1.5f;
+    [SerializeField] float minTurnSpeed = 0.5f;
+    [SerializeField] float maxSpeed = 15f;
+    [SerializeField] private float backMultiplicator = 0.5f;
+        
+    [Header("Drag")]
     [SerializeField] float linearDrag = 1f;
     [SerializeField] float angularDrag = 2f;
     public bool isSprinting = false;
-    
-    
+
+
     float horizontal;
     float vertical;
-    
+
     void Start()
     {
-        if(boatRb == null) boatRb = GetComponent<Rigidbody>();
-        
+        if (boatRb == null) boatRb = GetComponent<Rigidbody>();
+
         boatRb.linearDamping = linearDrag;
         boatRb.angularDamping = angularDrag;
     }
-    
+
     private void Update()
     {
         ManageInputs();
+
+        if (movementModes.Count == 0 && currentMovementMode == CurrentMovementMode.Constant) currentMovementMode = CurrentMovementMode.Normal; 
     }
-    
+
     private void ManageInputs()
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton2);
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            if (currentSelectedMovementMode + 1 < movementModes.Count)
+            {
+                currentSelectedMovementMode++;
+            }
+        }
+        
+        
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            
+            if (currentSelectedMovementMode > 0)
+            {
+                currentSelectedMovementMode--;
+            }
+        }
     }
 
     private void FixedUpdate()
     {
-        if(vertical < 0) vertical *= backMultiplicator;
-        float sprintMultiplicator = isSprinting ? 1.75f : 1f;
-        if (boatRb.linearVelocity.magnitude < maxSpeed * sprintMultiplicator)
+        if (currentMovementMode == CurrentMovementMode.Normal)
         {
-            boatRb.AddForce(transform.forward * (vertical * moveSpeed * sprintMultiplicator));
+            if (vertical < 0) vertical *= backMultiplicator;
+            float sprintMultiplicator = isSprinting ? 1.75f : 1f;
+            if (boatRb.linearVelocity.magnitude < maxSpeed * sprintMultiplicator)
+            {
+                boatRb.AddForce(transform.forward * (vertical * moveSpeed * sprintMultiplicator));
+            }
+
+            float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / maxSpeed);
+            float turnMultiplier = Mathf.Lerp(minTurnSpeed, 1f, velocityFactor);
+            boatRb.AddTorque(Vector3.up * (horizontal * turnSpeed * turnMultiplier));
         }
+        else if(currentMovementMode == CurrentMovementMode.Constant)
+        {
+            MovementModeSpeed mode = movementModes[currentSelectedMovementMode];
+            float sprintMultiplier = isSprinting ? 1.75f : 1f;
+            float targetSpeed = mode.modeMoveSpeed * sprintMultiplier;
         
-        float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / maxSpeed);
-        float turnMultiplier = Mathf.Lerp(minTurnSpeed, 1f, velocityFactor);
-        boatRb.AddTorque(Vector3.up * (horizontal * turnSpeed * turnMultiplier));
+            // Apply constant forward force
+            if (boatRb.linearVelocity.magnitude < targetSpeed)
+            {
+                boatRb.AddForce(transform.forward * mode.modeMoveSpeed * sprintMultiplier);
+            }
+
+            float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / targetSpeed);
+            float turnMultiplier = Mathf.Lerp(mode.modeMinTurnSpeed, 1f, velocityFactor);
+            boatRb.AddTorque(Vector3.up * (horizontal * mode.modeTurnSpeed * turnMultiplier));
+        }
         
     }
 }
+
+[Serializable]
+public class MovementModeSpeed
+{
+    [Header("Movement Data")]
+    public string modeName;
+    public float modeMoveSpeed = 15f;
+    public float modeTurnSpeed = 1.5f;
+    public float modeMinTurnSpeed = 0.5f;
+    
+    [Header("Camera Data Normal")]
+    public Vector3 modeCamOffset = new Vector3(0, 5, -10);
+    public float modeCamSmoothFollow = 5f;
+    public float modeCamLookAtHeight = 2f;
+    
+    [Header("Camera Sprint Mode Settings")]
+    public Vector3 modeCamSprintOffset = new Vector3(0, 6, -12);
+    public float modeCamSprintSmoothFollow = 8f;
+    public float modeCamSprintLookAtHeight = 2.5f;
+    
+}
+
+[Serializable]
+public enum CurrentMovementMode
+{
+    Constant,
+    Normal
+};

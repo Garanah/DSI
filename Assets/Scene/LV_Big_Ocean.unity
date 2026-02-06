@@ -368,6 +368,10 @@ MonoBehaviour:
   offset: {x: 0, y: 5, z: -10}
   smoothFollow: 5
   lookAtHeight: 2
+  sprintOffset: {x: 0, y: 6, z: -12}
+  sprintSmoothFollow: 8
+  sprintLookAtHeight: 2.5
+  transitionSpeed: 3
   boatController: {fileID: 1377080158}
 --- !u!43 &155004547
 Mesh:
@@ -79156,6 +79160,70 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: currentMovementMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeMoveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeTurnSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[1].modeMoveSpeed
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[1].modeTurnSpeed
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeCamOffset.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeCamOffset.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeMinTurnSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[1].modeMinTurnSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeCamLookAtHeight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeCamSmoothFollow
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeCamSprintOffset.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeCamSprintOffset.z
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeCamSprintLookAtHeight
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: movementModes.Array.data[0].modeCamSprintSmoothFollow
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2361256706987322645, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
