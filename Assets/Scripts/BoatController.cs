@@ -48,7 +48,7 @@ public class BoatController : MonoBehaviour
         vertical = Input.GetAxisRaw("Vertical");
         isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton2);
 
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             if (currentSelectedMovementMode + 1 < movementModes.Count)
             {
@@ -57,7 +57,7 @@ public class BoatController : MonoBehaviour
         }
         
         
-        if (Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T) || Input.GetKeyDown(KeyCode.JoystickButton1))
         {
             
             if (currentSelectedMovementMode > 0)
