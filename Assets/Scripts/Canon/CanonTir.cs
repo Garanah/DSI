@@ -5,13 +5,42 @@ public class CanonTir : MonoBehaviour
     [SerializeField] private GameObject[] spawnPoints;
     [SerializeField] private Rigidbody bulletPrefabRb;
     [SerializeField] private float bulletSpeed = 10f;
+    [SerializeField] private GameObject previewShotMesh;
 
-    void FixedUpdate()
+    private bool preview = false;
+    private bool shoot = false;
+
+    void InputManager()
     {
         if (Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
-            SpawnBullets(spawnPoints);
+            preview = !preview;
         }
+
+        if (Input.GetKeyUp(KeyCode.Joystick1Button5))
+        {
+            shoot = !shoot;
+        }
+    }
+
+    void Update()
+    {
+        InputManager();
+    }
+    void FixedUpdate()
+    {
+        if (preview)
+        {
+            previewShotMesh.SetActive(true);
+            preview = !preview;
+        }
+        if (shoot)
+        {   
+            previewShotMesh.SetActive(false);
+            SpawnBullets(spawnPoints);
+            shoot = !shoot;
+        }
+        
     }
     
     void SpawnBullets(GameObject[] spawnPoints)
