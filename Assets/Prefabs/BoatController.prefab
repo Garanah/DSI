@@ -1470,9 +1470,9 @@ MonoBehaviour:
     modeCamOffset: {x: 0, y: 5, z: -10}
     modeCamSmoothFollow: 3
     modeCamLookAtHeight: 2.5
-    modeCamSprintOffset: {x: 0, y: 0, z: 0}
-    modeCamSprintSmoothFollow: 0
-    modeCamSprintLookAtHeight: 0
+    modeCamSprintOffset: {x: -10, y: 4.5, z: -5.5}
+    modeCamSprintSmoothFollow: 50
+    modeCamSprintLookAtHeight: 4
   - modeName: Slow
     modeMoveSpeed: 25
     modeTurnSpeed: 25
@@ -1480,9 +1480,9 @@ MonoBehaviour:
     modeCamOffset: {x: 0, y: 5, z: -10}
     modeCamSmoothFollow: 2.5
     modeCamLookAtHeight: 2.5
-    modeCamSprintOffset: {x: 0, y: 5, z: -10}
-    modeCamSprintSmoothFollow: 2.5
-    modeCamSprintLookAtHeight: 2.5
+    modeCamSprintOffset: {x: -10, y: 4.5, z: -5.5}
+    modeCamSprintSmoothFollow: 50
+    modeCamSprintLookAtHeight: 4
   - modeName: Medium
     modeMoveSpeed: 45
     modeTurnSpeed: 15
@@ -1490,9 +1490,9 @@ MonoBehaviour:
     modeCamOffset: {x: 0, y: 10, z: -20}
     modeCamSmoothFollow: 3
     modeCamLookAtHeight: 5
-    modeCamSprintOffset: {x: 0, y: 0, z: 0}
-    modeCamSprintSmoothFollow: 0
-    modeCamSprintLookAtHeight: 0
+    modeCamSprintOffset: {x: -15, y: 7.5, z: -8}
+    modeCamSprintSmoothFollow: 50
+    modeCamSprintLookAtHeight: 6
   - modeName: Fast
     modeMoveSpeed: 75
     modeTurnSpeed: 10
@@ -1500,9 +1500,9 @@ MonoBehaviour:
     modeCamOffset: {x: 0, y: 20, z: -33}
     modeCamSmoothFollow: 3
     modeCamLookAtHeight: 12
-    modeCamSprintOffset: {x: 0, y: 0, z: 0}
-    modeCamSprintSmoothFollow: 0
-    modeCamSprintLookAtHeight: 0
+    modeCamSprintOffset: {x: -20, y: 9, z: -11}
+    modeCamSprintSmoothFollow: 50
+    modeCamSprintLookAtHeight: 8
   currentSelectedMovementMode: 0
   boatRb: {fileID: 1402960581778967338}
   moveSpeed: 35

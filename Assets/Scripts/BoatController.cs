@@ -46,7 +46,7 @@ public class BoatController : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton2);
+        isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton5);
 
         if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
@@ -73,9 +73,9 @@ public class BoatController : MonoBehaviour
         {
             if (vertical < 0) vertical *= backMultiplicator;
             float sprintMultiplicator = isSprinting ? 1.75f : 1f;
-            if (boatRb.linearVelocity.magnitude < maxSpeed * sprintMultiplicator)
+            if (boatRb.linearVelocity.magnitude < maxSpeed)
             {
-                boatRb.AddForce(transform.forward * (vertical * moveSpeed * sprintMultiplicator));
+                boatRb.AddForce(transform.forward * (vertical * moveSpeed));
             }
 
             float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / maxSpeed);
@@ -86,12 +86,12 @@ public class BoatController : MonoBehaviour
         {
             MovementModeSpeed mode = movementModes[currentSelectedMovementMode];
             float sprintMultiplier = isSprinting ? 1.75f : 1f;
-            float targetSpeed = mode.modeMoveSpeed * sprintMultiplier;
+            float targetSpeed = mode.modeMoveSpeed;
         
             // Apply constant forward force
             if (boatRb.linearVelocity.magnitude < targetSpeed)
             {
-                boatRb.AddForce(transform.forward * mode.modeMoveSpeed * sprintMultiplier);
+                boatRb.AddForce(transform.forward * mode.modeMoveSpeed );
             }
 
             float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / targetSpeed);
