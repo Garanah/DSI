@@ -87,10 +87,10 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
-    - _Depth: 1.17
+    - _Depth: 1.04
     - _DepthOffsetEnable: 0
     - _Depth_Blur: 2.65
-    - _Depth_Gradient: -0.26
+    - _Depth_Gradient: -0.28
     - _Depth_Level: -0.18
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
@@ -145,7 +145,7 @@ Material:
     - _SurfaceType: 1
     - _Threshold: 0.523
     - _TransmissionEnable: 1
-    - _Transparency: 0.02
+    - _Transparency: 0.013
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -162,7 +162,7 @@ Material:
     - _foamTiling: 6.88
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _Down_Color: {r: 0.073291205, g: 0.20783168, b: 0.254717, a: 1}
+    - _Down_Color: {r: 0.029681385, g: 0.17722893, b: 0.21698111, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Up_Color: {r: 0.20901565, g: 0.5720225, b: 0.5754717, a: 1}
   m_BuildTextureStacks: []
