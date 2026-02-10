@@ -23,7 +23,9 @@ public class BoatController : MonoBehaviour
     [SerializeField] float angularDrag = 2f;
     public bool isSprinting = false;
 
-
+    [Header("UI Animation")]
+    public System.Action OnMovementModeChanged;
+    
     float horizontal;
     float vertical;
 
@@ -53,6 +55,7 @@ public class BoatController : MonoBehaviour
             if (currentSelectedMovementMode + 1 < movementModes.Count)
             {
                 currentSelectedMovementMode++;
+                OnMovementModeChanged?.Invoke();
             }
         }
         
@@ -63,6 +66,7 @@ public class BoatController : MonoBehaviour
             if (currentSelectedMovementMode > 0)
             {
                 currentSelectedMovementMode--;
+                OnMovementModeChanged?.Invoke();
             }
         }
     }
@@ -96,7 +100,7 @@ public class BoatController : MonoBehaviour
 
             float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / targetSpeed);
             float turnMultiplier = Mathf.Lerp(mode.modeMinTurnSpeed, 1f, velocityFactor);
-            boatRb.AddTorque(Vector3.up * (horizontal * mode.modeTurnSpeed * turnMultiplier));
+//            boatRb.AddTorque(Vector3.up * (horizontal * mode.modeTurnSpeed * turnMultiplier));
         }
         
     }
