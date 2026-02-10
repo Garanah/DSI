@@ -2818,6 +2818,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4351c5a05554325499409fc28c3c3230, type: 3}
   m_PrefabInstance: {fileID: 1495256705}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1079969381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1079969377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2bd452b6d8c3a40a84bd11d24a43d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoatController
+  currentMovementMode: 1
+  movementModes: []
+  currentSelectedMovementMode: 0
+  boatRb: {fileID: 0}
+  moveSpeed: 15
+  turnSpeed: 1.5
+  minTurnSpeed: 0.5
+  maxSpeed: 15
+  backMultiplicator: 0.5
+  linearDrag: 1
+  angularDrag: 2
+  isSprinting: 0
 --- !u!1 &1109604309
 GameObject:
   m_ObjectHideFlags: 0
@@ -4139,7 +4163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -643}
+  m_AnchoredPosition: {x: 0, y: -607.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1485259431
@@ -4250,6 +4274,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4351c5a05554325499409fc28c3c3230, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1079969378}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4351c5a05554325499409fc28c3c3230, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1079969381}
   m_SourcePrefab: {fileID: 100100000, guid: 4351c5a05554325499409fc28c3c3230, type: 3}
 --- !u!1001 &1500067373
 PrefabInstance:
