@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_CalmWater
+  m_Name: M_AgitatedWater
   m_Shader: {fileID: -6465566751694194690, guid: 645f4fb763add0e419b55db567b7f87d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -113,8 +113,8 @@ Material:
     - _If_Transp_Global: 0
     - _MaterialID: 1
     - _MaterialTypeMask: 2
-    - _No_Sine: 0
-    - _No_Sine_Caustic: 0
+    - _No_Sine: 1
+    - _No_Sine_Caustic: 1
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RayTracing: 0
@@ -124,7 +124,7 @@ Material:
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
     - _Sine_Amplitude: 0.02
-    - _Sine_Caustic_Amplitude: 0.11
+    - _Sine_Caustic_Amplitude: 31.16
     - _Sine_Caustic_Fade: 0.03
     - _Sine_Caustic_Speed: 2
     - _Sine_Caustic_mplitude: 0.05
@@ -149,7 +149,7 @@ Material:
     - _Test: 0
     - _Threshold: 0.523
     - _TransmissionEnable: 1
-    - _Transparency: 0
+    - _Transparency: 0.267
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -166,11 +166,11 @@ Material:
     - _foamTiling: 6.88
     m_Colors:
     - _Caustic_Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Caustic_and_Foam_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Caustic_and_Foam_Color: {r: 0.31452474, g: 0.53247875, b: 0.7169812, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _Down_Color: {r: 0.073291205, g: 0.20783168, b: 0.254717, a: 1}
+    - _Down_Color: {r: 0.038981833, g: 0.051292952, b: 0.11320752, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Up_Color: {r: 0.20901565, g: 0.5720225, b: 0.5754717, a: 1}
+    - _Up_Color: {r: 0.11400853, g: 0.2556233, b: 0.3962264, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5359707168883102370
