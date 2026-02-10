@@ -112,6 +112,8 @@ Material:
     - _If_Transp_Global: 0
     - _MaterialID: 1
     - _MaterialTypeMask: 2
+    - _No_Sine: 0
+    - _No_Sine_Caustic: 0
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RayTracing: 0
@@ -125,7 +127,7 @@ Material:
     - _Sine_Caustic_Fade: 0.03
     - _Sine_Caustic_Speed: 2
     - _Sine_Caustic_mplitude: 0.05
-    - _Sine_Foam_Amplitude: 0.5
+    - _Sine_Foam_Amplitude: 0.04
     - _Sine_Foam_Amplitude_1: 1
     - _Sine_Foam_Speed: 2
     - _Sine_Foam_Speed_1: 1
@@ -143,9 +145,10 @@ Material:
     - _StencilWriteMaskMV: 41
     - _SupportDecals: 1
     - _SurfaceType: 1
+    - _Test: 0
     - _Threshold: 0.523
     - _TransmissionEnable: 1
-    - _Transparency: 0.013
+    - _Transparency: 0.295
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -161,6 +164,8 @@ Material:
     - _ZWrite: 0
     - _foamTiling: 6.88
     m_Colors:
+    - _Caustic_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Caustic_and_Foam_Color: {r: 0.6179246, g: 1, b: 0.9727356, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _Down_Color: {r: 0.029681385, g: 0.17722893, b: 0.21698111, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
