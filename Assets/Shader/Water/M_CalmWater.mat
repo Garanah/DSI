@@ -29,7 +29,7 @@ Material:
   - TransparentBackface
   - RayTracingPrepass
   - MOTIONVECTORS
-  m_LockedProperties: _Depth _Foam_Threshold
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -82,15 +82,16 @@ Material:
     - _BlendMode: 0
     - _Blur: 0.97
     - _Caustic_Deformation: 4.9
-    - _Caustic_Size: 2.4
+    - _Caustic_Size: -5.01
     - _Caustic_Speed: 0.8
+    - _Caustic_and_Foam: 1
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
-    - _Depth: 1.17
+    - _Depth: 0.6
     - _DepthOffsetEnable: 0
-    - _Depth_Blur: 2.65
-    - _Depth_Gradient: -0.26
+    - _Depth_Blur: 0
+    - _Depth_Gradient: -0.19
     - _Depth_Level: -0.18
     - _DoubleSidedEnable: 0
     - _DoubleSidedGIMode: 0
@@ -101,17 +102,19 @@ Material:
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
     - _Float: 0.00005
-    - _Foam_Amount: 1.61
-    - _Foam_Cutoff: 2.42
-    - _Foam_Range: 0.34
-    - _Foam_Speed: 3.4
+    - _Foam_Amount: 1.21
+    - _Foam_Cutoff: 1.28
+    - _Foam_Range: 0.53
+    - _Foam_Speed: 0.77
     - _Foam_Threshold: -1
     - _Foam_Threshold_2: 0
-    - _Foam_Tiling: 7.59
+    - _Foam_Tiling: 134.72
     - _Global_Transparency: 1
     - _If_Transp_Global: 0
     - _MaterialID: 1
     - _MaterialTypeMask: 2
+    - _No_Sine: 0
+    - _No_Sine_Caustic: 0
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RayTracing: 0
@@ -121,7 +124,7 @@ Material:
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
     - _Sine_Amplitude: 0.02
-    - _Sine_Caustic_Amplitude: 0.04
+    - _Sine_Caustic_Amplitude: 0.11
     - _Sine_Caustic_Fade: 0.03
     - _Sine_Caustic_Speed: 2
     - _Sine_Caustic_mplitude: 0.05
@@ -143,9 +146,10 @@ Material:
     - _StencilWriteMaskMV: 41
     - _SupportDecals: 1
     - _SurfaceType: 1
+    - _Test: 0
     - _Threshold: 0.523
     - _TransmissionEnable: 1
-    - _Transparency: 0.02
+    - _Transparency: 0
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -153,7 +157,7 @@ Material:
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
-    - _Underwater_Deformation: 0.0005
+    - _Underwater_Deformation: 0.002
     - _UseShadowThreshold: 0
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
@@ -161,6 +165,8 @@ Material:
     - _ZWrite: 0
     - _foamTiling: 6.88
     m_Colors:
+    - _Caustic_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Caustic_and_Foam_Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _Down_Color: {r: 0.073291205, g: 0.20783168, b: 0.254717, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
