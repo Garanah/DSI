@@ -45,7 +45,7 @@ public class RotateMeshBySpeed : MonoBehaviour
             Time.deltaTime * acceleration
         );
         
-        transform.Rotate(Vector3.up, currentRotationSpeed * Time.deltaTime, Space.Self);
+        transform.Rotate(Vector3.right, currentRotationSpeed * Time.deltaTime, Space.Self);
     }
 
     void UpdateTargetSpeed()
