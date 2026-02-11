@@ -29,23 +29,36 @@ public class SkillPanelController : MonoBehaviour
         SlidePanel();
     }
 
+    private bool l2Pressed = false;
+    private bool r2Pressed = false;
+
     void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Y))
-            panelOpen = true;
-
-        if (Input.GetKeyDown(KeyCode.H))
-            panelOpen = false;
+        if (Input.GetKeyDown(KeyCode.Y) || Input.GetKeyDown(KeyCode.JoystickButton3))
+            panelOpen = !panelOpen;
 
         if (!panelOpen) return;
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        float l2 = Input.GetAxis("L2");
+        float r2 = Input.GetAxis("R2");
+
+        if (Input.GetKeyDown(KeyCode.Q) || (l2 > 0.5f && !l2Pressed))
+        {
             ChangeSelection(-1);
+            l2Pressed = true;
+        }
+        if (l2 < 0.5f)
+            l2Pressed = false;
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) || (r2 > 0.5f && !r2Pressed))
+        {
             ChangeSelection(1);
+            r2Pressed = true;
+        }
+        if (r2 < 0.5f)
+            r2Pressed = false;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton2))
             bubbles[currentIndex].UseSkill();
     }
 

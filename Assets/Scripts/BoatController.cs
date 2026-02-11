@@ -10,6 +10,7 @@ public class BoatController : MonoBehaviour
 
     [Header("Components")]
     [SerializeField] Rigidbody boatRb;
+    private bool isStopped = false;
 
     [Header("Movement Values")] 
     [SerializeField] float moveSpeed = 15f;
@@ -46,6 +47,8 @@ public class BoatController : MonoBehaviour
 
     private void ManageInputs()
     {
+        if (isStopped) return;
+        
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
         isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton5);
@@ -73,6 +76,8 @@ public class BoatController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isStopped) return;
+        
         if (currentMovementMode == CurrentMovementMode.Normal)
         {
             if (vertical < 0) vertical *= backMultiplicator;
@@ -100,9 +105,30 @@ public class BoatController : MonoBehaviour
 
             float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / targetSpeed);
             float turnMultiplier = Mathf.Lerp(mode.modeMinTurnSpeed, 1f, velocityFactor);
-//            boatRb.AddTorque(Vector3.up * (horizontal * mode.modeTurnSpeed * turnMultiplier));
+            // boatRb.AddTorque(Vector3.up * (horizontal * mode.modeTurnSpeed * turnMultiplier)); //je l'ai commenté car je ne pouvais plus play
         }
         
+    }
+    // MOORING
+    public void StopBoat()
+    {
+        if (boatRb == null) return;
+
+        isStopped = true;
+        
+        boatRb.linearVelocity = Vector3.zero;
+        boatRb.angularVelocity = Vector3.zero;
+        //boatRb.isKinematic = true;
+        currentSelectedMovementMode = 0;
+        OnMovementModeChanged?.Invoke();
+    }
+
+    public void ResumeBoat()
+    {
+        if (boatRb == null) return;
+
+        isStopped = false;
+        //boatRb.isKinematic = false;
     }
 }
 
