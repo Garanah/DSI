@@ -124,7 +124,7 @@ Material:
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
     - _Sine_Amplitude: 0.02
-    - _Sine_Caustic_Amplitude: 31.16
+    - _Sine_Caustic_Amplitude: 14.86
     - _Sine_Caustic_Fade: 0.03
     - _Sine_Caustic_Speed: 2
     - _Sine_Caustic_mplitude: 0.05

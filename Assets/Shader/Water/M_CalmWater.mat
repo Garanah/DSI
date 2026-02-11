@@ -168,9 +168,9 @@ Material:
     - _Caustic_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Caustic_and_Foam_Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _Down_Color: {r: 0.073291205, g: 0.20783168, b: 0.254717, a: 1}
+    - _Down_Color: {r: 0.12156862, g: 0.32941177, b: 0.30336764, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Up_Color: {r: 0.20901565, g: 0.5720225, b: 0.5754717, a: 1}
+    - _Up_Color: {r: 0.3726415, g: 1, b: 0.8431604, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5359707168883102370
