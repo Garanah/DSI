@@ -440,7 +440,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBubble
   cooldownOverlay: {fileID: 7892204849226241376}
   selectionFrame: {fileID: 4987911776517212928}
-  cooldownTime: 3
+  cooldownTime: 5
 --- !u!1 &1328039963822447797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBubble
   cooldownOverlay: {fileID: 297894541724002659}
   selectionFrame: {fileID: 3183098903623897490}
-  cooldownTime: 3
+  cooldownTime: 5
 --- !u!1 &2752305297668887180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBubble
   cooldownOverlay: {fileID: 9100144615184002606}
   selectionFrame: {fileID: 626468318777217971}
-  cooldownTime: 3
+  cooldownTime: 5
 --- !u!1 &2918704025574921639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1791,7 +1791,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBubble
   cooldownOverlay: {fileID: 4297361168125833198}
   selectionFrame: {fileID: 4763322305423909468}
-  cooldownTime: 3
+  cooldownTime: 5
 --- !u!1 &3780184571957300679
 GameObject:
   m_ObjectHideFlags: 0
@@ -4223,7 +4223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SkillBubble
   cooldownOverlay: {fileID: 2378609035819034993}
   selectionFrame: {fileID: 3500860222945707149}
-  cooldownTime: 3
+  cooldownTime: 5
 --- !u!1 &8473466830408345198
 GameObject:
   m_ObjectHideFlags: 0
@@ -4324,7 +4324,7 @@ Transform:
   m_GameObject: {fileID: 8597972525053168082}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -230.43408, y: -219.7954, z: -210.607}
+  m_LocalPosition: {x: -224, y: -199, z: -210.607}
   m_LocalScale: {x: 0.68906116, y: 0.68906116, z: 0.68906116}
   m_ConstrainProportionsScale: 0
   m_Children:
