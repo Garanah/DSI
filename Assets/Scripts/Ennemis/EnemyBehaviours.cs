@@ -8,41 +8,42 @@ public class EnemyBehaviours : MonoBehaviour
 
     [Header("Runtime")]
     public int enemyPv;
-    public int enemyDamage;
+    public float enemyDamage;
     public float enemySpeed;
 
     [Header("Attack")]
-    public float attackRange = 2.5f;
-    public float attackCooldown = 1.2f;
+    public float attackRange;
+    public float attackCooldown;
     private float attackTimer;
 
     void Start()
     {
         LoadData();
-        
     }
 
     void Update()
     {
-        if (boatData == null) return;
+        if (boatData == null || enemyData == null) return;
 
-        FollowBoat();
-        TryAttack();
+        float dist = Vector3.Distance(transform.position, boatData.transform.position);
+
+        if (dist > attackRange)
+            FollowBoat();
+
+        TryAttack(dist);
     }
 
     void FollowBoat()
     {
         Vector3 dir = (boatData.transform.position - transform.position).normalized;
         transform.position += dir * (enemySpeed * Time.deltaTime);
-        
+
         transform.forward = Vector3.Lerp(transform.forward, dir, 8f * Time.deltaTime);
     }
 
-    void TryAttack()
+    void TryAttack(float dist)
     {
         attackTimer -= Time.deltaTime;
-
-        float dist = Vector3.Distance(transform.position, boatData.transform.position);
 
         if (dist <= attackRange && attackTimer <= 0f)
         {
@@ -69,7 +70,10 @@ public class EnemyBehaviours : MonoBehaviour
     void LoadData()
     {
         enemyPv = enemyData.enemyPv;
-        enemyDamage = enemyData.enemyDamage;
-        enemySpeed = enemyData.enemySpeed;
+        enemyDamage = enemyData.atkDamage;
+        enemySpeed = enemyData.movementSpeed;
+
+        attackRange = enemyData.atkDistance;
+        attackCooldown = enemyData.atkSpeed;
     }
 }

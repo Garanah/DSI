@@ -15,5 +15,7 @@ MonoBehaviour:
   enemyID: 0
   enemyName: Jean
   enemyPv: 100
-  enemyDamage: 2
-  enemySpeed: 3
+  movementSpeed: 10
+  atkDistance: 5
+  atkDamage: 10
+  atkSpeed: 1
