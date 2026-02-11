@@ -761,6 +761,9 @@
         },
         {
             "m_Id": "e9f5b8c6601344ecb9ae40607643700b"
+        },
+        {
+            "m_Id": "d87a1dc8b2734a69a9f5060b868e13e8"
         }
     ],
     "m_GroupDatas": [
@@ -3707,8 +3710,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 5274.0,
-            "y": 437.0
+            "x": 5280.00048828125,
+            "y": 437.0000305175781
         },
         "m_Blocks": [
             {
@@ -3734,6 +3737,9 @@
             },
             {
                 "m_Id": "a908d1a7bfc8412180afeb77ba49c5c2"
+            },
+            {
+                "m_Id": "d87a1dc8b2734a69a9f5060b868e13e8"
             }
         ]
     },
@@ -4908,7 +4914,7 @@
     "m_SGVersion": 0,
     "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.SystemData",
     "m_ObjectId": "0dd5a1d60645467295c4156e7dac29c5",
-    "m_MaterialNeedsUpdateHash": 0,
+    "m_MaterialNeedsUpdateHash": 279841,
     "m_SurfaceType": 1,
     "m_RenderingPass": 4,
     "m_BlendMode": 0,
@@ -4917,7 +4923,7 @@
     "m_TransparentCullMode": 2,
     "m_OpaqueCullMode": 2,
     "m_SortPriority": 0,
-    "m_AlphaTest": false,
+    "m_AlphaTest": true,
     "m_ExcludeFromTUAndAA": false,
     "m_TransparentDepthPrepass": false,
     "m_TransparentDepthPostpass": false,
@@ -9215,6 +9221,21 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
+    "m_ObjectId": "460d7c821a4c4e34afc625f1f7eefef2",
+    "m_Id": 0,
+    "m_DisplayName": "Alpha Clip Threshold",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "AlphaClipThreshold",
+    "m_StageCapability": 2,
+    "m_Value": 0.5,
+    "m_DefaultValue": 0.5,
+    "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.TimeNode",
     "m_ObjectId": "46800fab588249af90bcf1084fbf42eb",
     "m_Group": {
@@ -9813,7 +9834,7 @@
     "m_ObjectId": "4d17061299be4a298dd46c673d088a05",
     "m_Title": "Transparency",
     "m_Position": {
-        "x": 277.0,
+        "x": 276.9999694824219,
         "y": -1175.0
     }
 }
@@ -11532,7 +11553,7 @@
     "m_Title": "Caustic",
     "m_Position": {
         "x": 188.0,
-        "y": -2100.0
+        "y": -2099.999755859375
     }
 }
 
@@ -12074,8 +12095,8 @@
     "m_ObjectId": "6752e110c89a42df8cf96c22b9ce3e64",
     "m_Title": "Water Depth Distortion",
     "m_Position": {
-        "x": -6935.0,
-        "y": -1409.0
+        "x": -6934.99951171875,
+        "y": -1408.9998779296875
     }
 }
 
@@ -13099,7 +13120,7 @@
     "m_ObjectId": "73b5ac0fd94b49fcbc3fc1bbde3ea9da",
     "m_Title": "Water Depth",
     "m_Position": {
-        "x": -2733.0,
+        "x": -2733.000244140625,
         "y": -1066.0
     }
 }
@@ -14921,7 +14942,7 @@
     "m_Title": "Up Color Transparency Option",
     "m_Position": {
         "x": 2341.0,
-        "y": -597.0
+        "y": -596.9999389648438
     }
 }
 
@@ -15101,7 +15122,7 @@
     "m_Title": "Wave Motion",
     "m_Position": {
         "x": -2646.0,
-        "y": 430.0
+        "y": 429.9999694824219
     }
 }
 
@@ -19178,7 +19199,7 @@
     "m_ObjectId": "b3e832fea98c47639f649a21243d4639",
     "m_Title": "Caustic Distortion + Wave Motion",
     "m_Position": {
-        "x": -157.0,
+        "x": -156.99998474121095,
         "y": -4587.0
     }
 }
@@ -19465,7 +19486,7 @@
     "m_ObjectId": "b649db2905614615ad30f72321fc6e2a",
     "m_Title": "Gradient Color + Depth",
     "m_Position": {
-        "x": 12.0,
+        "x": 12.000001907348633,
         "y": 75.0
     }
 }
@@ -21294,7 +21315,7 @@
     "m_ConservativeDepthOffset": false,
     "m_TransparencyFog": true,
     "m_AlphaTestShadow": false,
-    "m_BackThenFrontRendering": false,
+    "m_BackThenFrontRendering": true,
     "m_TransparentDepthPrepass": false,
     "m_TransparentDepthPostpass": false,
     "m_TransparentPerPixelSorting": false,
@@ -22406,6 +22427,40 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BlockNode",
+    "m_ObjectId": "d87a1dc8b2734a69a9f5060b868e13e8",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "SurfaceDescription.AlphaClipThreshold",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": 0.0,
+            "y": 0.0,
+            "width": 0.0,
+            "height": 0.0
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "460d7c821a4c4e34afc625f1f7eefef2"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_DismissedVersion": 0,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_SerializedDescriptor": "SurfaceDescription.AlphaClipThreshold"
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "d8d380eb383f441b83d7c784d9325ad2",
     "m_Id": 0,
@@ -22491,7 +22546,7 @@
     "m_Title": "Caustic Distorsion",
     "m_Position": {
         "x": -4166.0,
-        "y": -4107.0
+        "y": -4106.99951171875
     }
 }
 
