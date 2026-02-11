@@ -256,7 +256,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 686da70c03093254fb63276747d7a8a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.38
+      value: 5.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 686da70c03093254fb63276747d7a8a0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -290,10 +290,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8099450635959715886, guid: 686da70c03093254fb63276747d7a8a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.049
+      objectReference: {fileID: 0}
     - target: {fileID: 847126084972179061, guid: 686da70c03093254fb63276747d7a8a0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2a5f26e51d400d242916d3281e91a30b, type: 2}
+      objectReference: {fileID: 2100000, guid: 1f9569a1d2f88664094ac7286cae198b, type: 2}
     - target: {fileID: 919132149155446097, guid: 686da70c03093254fb63276747d7a8a0, type: 3}
       propertyPath: m_Name
       value: Wheel_Boat_Test_Lp

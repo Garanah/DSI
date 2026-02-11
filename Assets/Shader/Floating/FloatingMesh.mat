@@ -61,7 +61,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
-    - _FloatOffset: -3.52
+    - _FloatOffset: -1.51
     - _FloatSpeed: 1
     - _MaterialID: 1
     - _MaterialTypeMask: 2
@@ -103,7 +103,7 @@ Material:
     m_Colors:
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _FloatRange: {r: 0, g: 5, b: 0, a: 0}
+    - _FloatRange: {r: 0, g: 0.3, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &4563698916596255048
