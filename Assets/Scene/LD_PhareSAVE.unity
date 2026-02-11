@@ -15486,6 +15486,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 84
       objectReference: {fileID: 0}
+    - target: {fileID: 2021705580776969459, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
+      propertyPath: currentMovementMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2361256706987322645, guid: f1297d672c699bc44a4ae31223dfef40, type: 3}
       propertyPath: m_LocalPosition.x
       value: 245.27
