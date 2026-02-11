@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_CalmWater
+  m_Name: M_CalmWater v2
   m_Shader: {fileID: -6465566751694194690, guid: 645f4fb763add0e419b55db567b7f87d, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -88,7 +88,7 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
-    - _Depth: 0.24
+    - _Depth: 0.6
     - _DepthOffsetEnable: 0
     - _Depth_Blur: 0
     - _Depth_Gradient: -0.19
@@ -102,13 +102,13 @@ Material:
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
     - _Float: 0.00005
-    - _Foam_Amount: 1.21
+    - _Foam_Amount: 2.7
     - _Foam_Cutoff: 1.28
     - _Foam_Range: 0.53
     - _Foam_Speed: 0.77
     - _Foam_Threshold: -1
     - _Foam_Threshold_2: 0
-    - _Foam_Tiling: 134.72
+    - _Foam_Tiling: 1850
     - _Global_Transparency: 1
     - _If_Transp_Global: 0
     - _MaterialID: 1
@@ -157,7 +157,7 @@ Material:
     - _TransparentSortPriority: 0
     - _TransparentWritingMotionVec: 0
     - _TransparentZWrite: 0
-    - _Underwater_Deformation: 0.0007
+    - _Underwater_Deformation: 0.01
     - _UseShadowThreshold: 0
     - _ZTestDepthEqualForOpaque: 4
     - _ZTestGBuffer: 4
