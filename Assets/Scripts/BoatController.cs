@@ -22,7 +22,8 @@ public class BoatController : MonoBehaviour
     [Header("Drag")]
     [SerializeField] float linearDrag = 1f;
     [SerializeField] float angularDrag = 2f;
-    public bool isSprinting = false;
+    public bool lookingRight = false;
+    public bool lookingLeft = false;
 
     [Header("UI Animation")]
     public System.Action OnMovementModeChanged;
@@ -51,7 +52,8 @@ public class BoatController : MonoBehaviour
         
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
-        isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton5);
+        lookingRight = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.JoystickButton5);
+        lookingLeft = Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.JoystickButton4);
 
         if (Input.GetKeyDown(KeyCode.R) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
@@ -81,7 +83,6 @@ public class BoatController : MonoBehaviour
         if (currentMovementMode == CurrentMovementMode.Normal)
         {
             if (vertical < 0) vertical *= backMultiplicator;
-            float sprintMultiplicator = isSprinting ? 1.75f : 1f;
             if (boatRb.linearVelocity.magnitude < maxSpeed)
             {
                 boatRb.AddForce(transform.forward * (vertical * moveSpeed));
@@ -94,7 +95,7 @@ public class BoatController : MonoBehaviour
         else if(currentMovementMode == CurrentMovementMode.Constant)
         {
             MovementModeSpeed mode = movementModes[currentSelectedMovementMode];
-            float sprintMultiplier = isSprinting ? 1.75f : 1f;
+            
             float targetSpeed = mode.modeMoveSpeed;
         
             // Apply constant forward force
@@ -105,7 +106,7 @@ public class BoatController : MonoBehaviour
 
             float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / targetSpeed);
             float turnMultiplier = Mathf.Lerp(mode.modeMinTurnSpeed, 1f, velocityFactor);
-            boatRb.AddTorque(Vector3.up * (horizontal * mode.modeTurnSpeed * turnMultiplier)); //je l'ai commenté car je ne pouvais plus play
+            boatRb.AddTorque(Vector3.up * (horizontal * mode.modeTurnSpeed * turnMultiplier));
         }
         
     }
@@ -146,11 +147,17 @@ public class MovementModeSpeed
     public float modeCamSmoothFollow = 5f;
     public float modeCamLookAtHeight = 2f;
     
-    [Header("Camera Sprint Mode Settings")]
+    [Header("Camera Shoot Right")]
     public Vector3 modeCamSprintOffset = new Vector3(0, 6, -12);
     public float modeCamSprintSmoothFollow = 8f;
     public float modeCamSprintLookAtHeight = 2.5f;
     
+    [Header("Camera Shoot Left")]
+    public Vector3 leftShootOffset = new Vector3(0, -6, -12);
+    public float leftShootSmoothFollow;
+    public float leftShootLookAtHeight;
+
+
 }
 
 [Serializable]

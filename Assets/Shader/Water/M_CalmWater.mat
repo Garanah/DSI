@@ -88,7 +88,7 @@ Material:
     - _ConservativeDepthOffsetEnable: 0
     - _CullMode: 2
     - _CullModeForward: 2
-    - _Depth: 0.6
+    - _Depth: 0.24
     - _DepthOffsetEnable: 0
     - _Depth_Blur: 0
     - _Depth_Gradient: -0.19
@@ -108,13 +108,13 @@ Material:
     - _Foam_Speed: 0.77
     - _Foam_Threshold: -1
     - _Foam_Threshold_2: 0
-    - _Foam_Tiling: 134.72
+    - _Foam_Tiling: 216.02
     - _Global_Transparency: 1
     - _If_Transp_Global: 0
     - _MaterialID: 1
     - _MaterialTypeMask: 2
-    - _No_Sine: 0
-    - _No_Sine_Caustic: 0
+    - _No_Sine: 1
+    - _No_Sine_Caustic: 1
     - _OpaqueCullMode: 2
     - _PerPixelSorting: 0
     - _RayTracing: 0
@@ -124,7 +124,7 @@ Material:
     - _RenderQueueType: 4
     - _RequireSplitLighting: 0
     - _Sine_Amplitude: 0.02
-    - _Sine_Caustic_Amplitude: 0.11
+    - _Sine_Caustic_Amplitude: 2
     - _Sine_Caustic_Fade: 0.03
     - _Sine_Caustic_Speed: 2
     - _Sine_Caustic_mplitude: 0.05
@@ -168,9 +168,9 @@ Material:
     - _Caustic_Color: {r: 1, g: 1, b: 1, a: 1}
     - _Caustic_and_Foam_Color: {r: 1, g: 1, b: 1, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _Down_Color: {r: 0.073291205, g: 0.20783168, b: 0.254717, a: 1}
+    - _Down_Color: {r: 0.12156863, g: 0.32941177, b: 0.3019608, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Up_Color: {r: 0.20901565, g: 0.5720225, b: 0.5754717, a: 1}
+    - _Up_Color: {r: 0.37254903, g: 1, b: 0.84313726, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &5359707168883102370
