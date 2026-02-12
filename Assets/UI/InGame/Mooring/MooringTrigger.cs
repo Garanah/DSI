@@ -59,7 +59,7 @@ public class MooringTrigger : MonoBehaviour
 
         if (playerInTrigger && boat != null)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.JoystickButton2))
             {
                 OpenMooringUI();
             }
