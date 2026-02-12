@@ -9834,7 +9834,7 @@
     "m_ObjectId": "4d17061299be4a298dd46c673d088a05",
     "m_Title": "Transparency",
     "m_Position": {
-        "x": 276.9999694824219,
+        "x": 277.0,
         "y": -1175.0
     }
 }
@@ -11553,7 +11553,7 @@
     "m_Title": "Caustic",
     "m_Position": {
         "x": 188.0,
-        "y": -2099.999755859375
+        "y": -2100.0
     }
 }
 
@@ -12095,8 +12095,8 @@
     "m_ObjectId": "6752e110c89a42df8cf96c22b9ce3e64",
     "m_Title": "Water Depth Distortion",
     "m_Position": {
-        "x": -6934.99951171875,
-        "y": -1408.9998779296875
+        "x": -6935.0,
+        "y": -1409.0
     }
 }
 
@@ -13120,7 +13120,7 @@
     "m_ObjectId": "73b5ac0fd94b49fcbc3fc1bbde3ea9da",
     "m_Title": "Water Depth",
     "m_Position": {
-        "x": -2733.000244140625,
+        "x": -2733.0,
         "y": -1066.0
     }
 }
@@ -14942,7 +14942,7 @@
     "m_Title": "Up Color Transparency Option",
     "m_Position": {
         "x": 2341.0,
-        "y": -596.9999389648438
+        "y": -597.0
     }
 }
 
@@ -15122,7 +15122,7 @@
     "m_Title": "Wave Motion",
     "m_Position": {
         "x": -2646.0,
-        "y": 429.9999694824219
+        "y": 430.0
     }
 }
 
@@ -19199,7 +19199,7 @@
     "m_ObjectId": "b3e832fea98c47639f649a21243d4639",
     "m_Title": "Caustic Distortion + Wave Motion",
     "m_Position": {
-        "x": -156.99998474121095,
+        "x": -157.0,
         "y": -4587.0
     }
 }
@@ -19486,7 +19486,7 @@
     "m_ObjectId": "b649db2905614615ad30f72321fc6e2a",
     "m_Title": "Gradient Color + Depth",
     "m_Position": {
-        "x": 12.000001907348633,
+        "x": 12.0,
         "y": 75.0
     }
 }
@@ -22546,7 +22546,7 @@
     "m_Title": "Caustic Distorsion",
     "m_Position": {
         "x": -4166.0,
-        "y": -4106.99951171875
+        "y": -4107.0
     }
 }
 
