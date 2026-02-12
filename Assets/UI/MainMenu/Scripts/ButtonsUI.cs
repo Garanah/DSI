@@ -11,8 +11,8 @@ public class ButtonsUI : MonoBehaviour
     // Bouton PLAY
     public void PlayGame()
     {
-        Debug.Log("Pas de référence scene, check script");
-        //SceneManager.LoadScene(playSceneName);
+        //Debug.Log("Pas de référence scene, check script");
+        SceneManager.LoadScene("LD_Phare");
     }
 
     // Bouton OPTIONS
