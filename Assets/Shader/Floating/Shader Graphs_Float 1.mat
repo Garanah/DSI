@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FloatingMesh
-  m_Shader: {fileID: -6465566751694194690, guid: 8ef866e93aff7f84a9a11e16406fd547, type: 3}
+  m_Name: Shader Graphs_Float 1
+  m_Shader: {fileID: -6465566751694194690, guid: 20561df7c39342745bae9ba879a2cc63, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -30,16 +30,16 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - _SampleTexture2D_cbbca96a98d844c68c2c564af65dd96a_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: b6d75938286bb9f45ad1b6e81b5a4562, type: 3}
+    - _SampleTexture2D_0bdccd058201437bad1acfa85c32ef84_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: cd39f4595ae53ec42a897a7910c32f00, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_d17ab1fdda8240cf8634528a868f92cf_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 435bcb09c2f6fbe4ba1723e695d2ac91, type: 3}
+    - _SampleTexture2D_418ef9172a4c4ee5a7bff120479671fa_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: a9986c6bb3a829c489427043814341b5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SampleTexture2D_f25d9cc58fac474fa416008e0af1e4ef_Texture_1_Texture2D:
-        m_Texture: {fileID: 2800000, guid: 207dd82581acaf24cb929afb4a2c1cb4, type: 3}
+    - _SampleTexture2D_afe6a593ee084fc1b79966ac830e50cf_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: f22df441b6f1cc24caeb1c59372e4cdf, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -73,7 +73,7 @@ Material:
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
-    - _FloatOffset: -1.51
+    - _FloatOffset: 0
     - _FloatSpeed: 0.8
     - _MaterialID: 1
     - _MaterialTypeMask: 2
@@ -113,13 +113,13 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.40784314, g: 0.4392157, b: 0.5647059, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _FloatRange: {r: 0, g: 0.5, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
---- !u!114 &4563698916596255048
+--- !u!114 &3589155863612198744
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

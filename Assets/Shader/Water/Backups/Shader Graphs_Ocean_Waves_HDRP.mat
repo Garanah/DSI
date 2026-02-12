@@ -40,10 +40,12 @@ Material:
     - _DoubleSidedNormalMode: 2
     - _DstBlend: 10
     - _DstBlend2: 10
+    - _Global_Transparency: 0
     - _StencilRefDepth: 0
     - _StencilRefGBuffer: 2
     - _StencilRefMV: 32
     - _SurfaceType: 1
+    - _Transparency: 0
     - _ZTestDepthEqualForOpaque: 4
     - _ZWrite: 0
     m_Colors: []
