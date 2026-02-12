@@ -6785,7 +6785,7 @@
     "m_ObjectId": "2a188c57e0a7463e9302424933926ea3",
     "m_Title": "Foam",
     "m_Position": {
-        "x": -2963.0,
+        "x": -2963.00048828125,
         "y": 984.0
     }
 }
@@ -11670,7 +11670,7 @@
     "m_ObjectId": "695888f3425a4f0592915b717539e231",
     "m_Title": "Water Depth Distortion",
     "m_Position": {
-        "x": -8954.0,
+        "x": -8954.0009765625,
         "y": -1813.0
     }
 }
@@ -13295,7 +13295,7 @@
     "m_ObjectId": "7c56dfcbfc8543c09ad1b2938587eb7d",
     "m_Title": "Transparency",
     "m_Position": {
-        "x": -2844.0,
+        "x": -2844.00048828125,
         "y": -1110.0
     }
 }
@@ -16033,8 +16033,8 @@
     "m_ObjectId": "9711f5245e064d3b8861d159514101a2",
     "m_Title": "Up Color Transparency Option",
     "m_Position": {
-        "x": -777.0,
-        "y": -532.0
+        "x": -777.000244140625,
+        "y": -532.0000610351563
     }
 }
 
@@ -17152,7 +17152,7 @@
     "m_ObjectId": "a219845273e24b258822e6cf600f65c2",
     "m_Title": "Gradient Color + Depth",
     "m_Position": {
-        "x": -3106.0,
+        "x": -3106.000244140625,
         "y": 140.0
     }
 }
@@ -19278,7 +19278,7 @@
     "m_ObjectId": "bdb85ee8044943b0885ae9e394914b27",
     "m_Title": "Caustic Distortion + Wave Motion",
     "m_Position": {
-        "x": -3275.0,
+        "x": -3275.000244140625,
         "y": -4522.0
     }
 }
@@ -19765,8 +19765,8 @@
     "m_ObjectId": "c3e97e7d254a434b99cb54bec5a82994",
     "m_Title": "Water Depth",
     "m_Position": {
-        "x": -5546.0,
-        "y": -1001.0
+        "x": -5546.0009765625,
+        "y": -1001.0000610351563
     }
 }
 
@@ -20403,8 +20403,8 @@
     "m_ObjectId": "cae1b56c42f943baad9ceee97b37ca7c",
     "m_Title": "Caustic Distorsion",
     "m_Position": {
-        "x": -7284.0,
-        "y": -4042.0
+        "x": -7284.00048828125,
+        "y": -4042.000244140625
     }
 }
 
@@ -21142,7 +21142,7 @@
     "m_ObjectId": "d6100d7d6ed5468f8a4671a8f5d0915b",
     "m_Title": "Caustic",
     "m_Position": {
-        "x": -2946.0,
+        "x": -2946.000244140625,
         "y": -2035.0
     }
 }
@@ -22327,8 +22327,8 @@
     "m_ObjectId": "e6ba5d91ac364dcfbb365bdeaae016a2",
     "m_Title": "Wave Motion",
     "m_Position": {
-        "x": -5564.0,
-        "y": 896.0
+        "x": -5564.00048828125,
+        "y": 896.0000610351563
     }
 }
 
