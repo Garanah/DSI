@@ -7097,128 +7097,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1860340210}
   m_LocalEulerAnglesHint: {x: 0, y: 85.894, z: 0}
---- !u!1 &764459694 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 684625f68162a6e44939e51e00024550, type: 3}
-  m_PrefabInstance: {fileID: 901211517}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &764459695
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764459694}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.233139, y: 0.71321106, z: 2.219986}
-  m_Center: {x: -0.014400482, y: 0.46830016, z: 0.018218994}
---- !u!54 &764459696
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764459694}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 80
-  m_CollisionDetection: 0
---- !u!114 &764459697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764459694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd2bd452b6d8c3a40a84bd11d24a43d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BoatController
-  currentMovementMode: 0
-  movementModes:
-  - modeName: Stopped
-    modeMoveSpeed: 0
-    modeTurnSpeed: 10
-    modeMinTurnSpeed: 1
-    modeCamOffset: {x: 0, y: 5, z: -10}
-    modeCamSmoothFollow: 3
-    modeCamLookAtHeight: 2.5
-    modeCamSprintOffset: {x: -10, y: 4.5, z: -5.5}
-    modeCamSprintSmoothFollow: 50
-    modeCamSprintLookAtHeight: 4
-  - modeName: Slow
-    modeMoveSpeed: 25
-    modeTurnSpeed: 25
-    modeMinTurnSpeed: 1
-    modeCamOffset: {x: 0, y: 5, z: -10}
-    modeCamSmoothFollow: 2.5
-    modeCamLookAtHeight: 2.5
-    modeCamSprintOffset: {x: -10, y: 4.5, z: -5.5}
-    modeCamSprintSmoothFollow: 50
-    modeCamSprintLookAtHeight: 4
-  - modeName: Medium
-    modeMoveSpeed: 45
-    modeTurnSpeed: 15
-    modeMinTurnSpeed: 1
-    modeCamOffset: {x: 0, y: 10, z: -20}
-    modeCamSmoothFollow: 3
-    modeCamLookAtHeight: 5
-    modeCamSprintOffset: {x: -15, y: 7.5, z: -8}
-    modeCamSprintSmoothFollow: 50
-    modeCamSprintLookAtHeight: 6
-  - modeName: Fast
-    modeMoveSpeed: 75
-    modeTurnSpeed: 10
-    modeMinTurnSpeed: 1
-    modeCamOffset: {x: 0, y: 20, z: -33}
-    modeCamSmoothFollow: 3
-    modeCamLookAtHeight: 12
-    modeCamSprintOffset: {x: -20, y: 9, z: -11}
-    modeCamSprintSmoothFollow: 50
-    modeCamSprintLookAtHeight: 8
-  currentSelectedMovementMode: 0
-  boatRb: {fileID: 764459696}
-  moveSpeed: 35
-  turnSpeed: 25
-  minTurnSpeed: 1
-  maxSpeed: 70
-  backMultiplicator: 0.3
-  linearDrag: 3
-  angularDrag: 4
-  isSprinting: 0
---- !u!4 &764459698 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-  m_PrefabInstance: {fileID: 901211517}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &773739743
 GameObject:
   m_ObjectHideFlags: 0
@@ -7774,34 +7652,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824659529}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &829282984 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8144394004440419581, guid: 684625f68162a6e44939e51e00024550, type: 3}
-  m_PrefabInstance: {fileID: 901211517}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &829282986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 829282984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21323f6d8400a1c4a9bbabba7122663a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RotateMeshBySpeed
-  boatController: {fileID: 764459697}
-  rotationByMode:
-  - modeName: STOP
-    rotationSpeed: 0
-  - modeName: LOW
-    rotationSpeed: 60
-  - modeName: MEDIUM
-    rotationSpeed: 180
-  - modeName: FAST
-    rotationSpeed: 360
-  acceleration: 5
 --- !u!1 &831791886
 GameObject:
   m_ObjectHideFlags: 0
@@ -8699,91 +8549,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901173619}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &901211517
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 193.1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.57
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -211.2
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      propertyPath: m_Name
-      value: Wheel_Boat_Test_Lp
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 764459697}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 764459696}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 764459695}
-    - targetCorrespondingSourceObject: {fileID: 8144394004440419581, guid: 684625f68162a6e44939e51e00024550, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 829282986}
-  m_SourcePrefab: {fileID: 100100000, guid: 684625f68162a6e44939e51e00024550, type: 3}
 --- !u!1 &922943572
 GameObject:
   m_ObjectHideFlags: 0
@@ -10879,7 +10644,7 @@ PrefabInstance:
     - target: {fileID: 1277273877951958619, guid: 0bb3d6c545566c64097d75329a4d13bf, type: 3}
       propertyPath: boatController
       value: 
-      objectReference: {fileID: 764459697}
+      objectReference: {fileID: 1715787792}
     - target: {fileID: 1835310749578407501, guid: 0bb3d6c545566c64097d75329a4d13bf, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -11916,7 +11681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39090cb608529df4583dce476d598697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraBehaviour
-  target: {fileID: 764459698}
+  target: {fileID: 1715787795}
   offset: {x: 0, y: 26, z: -26}
   smoothFollow: 5
   lookAtHeight: 7.5
@@ -11924,7 +11689,7 @@ MonoBehaviour:
   sprintSmoothFollow: 5
   sprintLookAtHeight: 15
   transitionSpeed: 3
-  boatController: {fileID: 764459697}
+  boatController: {fileID: 1715787792}
 --- !u!1 &1322306213
 GameObject:
   m_ObjectHideFlags: 0
@@ -15461,6 +15226,22 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4351c5a05554325499409fc28c3c3230, type: 3}
+--- !u!114 &1715787792 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2720694716043578427, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+  m_PrefabInstance: {fileID: 1943958780}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd2bd452b6d8c3a40a84bd11d24a43d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoatController
+--- !u!4 &1715787795 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+  m_PrefabInstance: {fileID: 1943958780}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1725118043
 GameObject:
   m_ObjectHideFlags: 0
@@ -17802,6 +17583,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1940918724}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1943958780
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 195.50868
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -213.10442
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803852216022500636, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5323649002716979110, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
+      propertyPath: m_Name
+      value: Wheel_Boat_07_Lp (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc4c24c14efeef949b87cdb9c355be8a, type: 3}
 --- !u!1 &1945738449
 GameObject:
   m_ObjectHideFlags: 0
@@ -19436,7 +19274,7 @@ PrefabInstance:
     - target: {fileID: 6462988586433553625, guid: 6bfb7cbc24eeacd4fa209c1bb3867ffa, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 764459698}
+      objectReference: {fileID: 1715787795}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -19460,8 +19298,8 @@ SceneRoots:
   - {fileID: 728159241}
   - {fileID: 6771312438314355713}
   - {fileID: 1236758458}
-  - {fileID: 901211517}
   - {fileID: 1763843134}
   - {fileID: 1445886668627706883}
   - {fileID: 63324743}
   - {fileID: 42737334}
+  - {fileID: 1943958780}

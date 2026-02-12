@@ -6,21 +6,38 @@ public class CanonTir : MonoBehaviour
     [SerializeField] private Rigidbody bulletPrefabRb;
     [SerializeField] private float bulletSpeed = 10f;
     [SerializeField] private GameObject previewShotMesh;
+    public bool right;
 
     private bool preview = false;
     private bool shoot = false;
 
     void InputManager()
     {
-        if (Input.GetKeyDown(KeyCode.Joystick1Button5))
+        if (right)
         {
-            preview = !preview;
-        }
+            if (Input.GetKeyDown(KeyCode.Joystick1Button5))
+            {
+                preview = !preview;
+            }
 
-        if (Input.GetKeyUp(KeyCode.Joystick1Button5))
-        {
-            shoot = !shoot;
+            if (Input.GetKeyUp(KeyCode.Joystick1Button5))
+            {
+                shoot = !shoot;
+            }
         }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Joystick1Button4))
+            {
+                preview = !preview;
+            }
+
+            if (Input.GetKeyUp(KeyCode.Joystick1Button4))
+            {
+                shoot = !shoot;
+            }
+        }
+        
     }
 
     void Update()
