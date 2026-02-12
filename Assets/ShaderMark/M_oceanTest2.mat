@@ -23,7 +23,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_oceanTest1
+  m_Name: M_oceanTest2
   m_Shader: {fileID: -6465566751694194690, guid: 1827e7fb9ad3a08449d2824603592e00, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -31,6 +31,7 @@ Material:
   - _DISABLE_SSR_TRANSPARENT
   - _ENABLE_FOG_ON_TRANSPARENT
   - _SURFACE_TYPE_TRANSPARENT
+  - _TESSELLATION_PHONG
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -273,11 +274,11 @@ Material:
     - _SupportDecals: 1
     - _SurfaceType: 1
     - _TessellationBackFaceCullEpsilon: 0
-    - _TessellationFactorMaxDistance: 60
-    - _TessellationFactorMinDistance: 30
+    - _TessellationFactorMaxDistance: 300
+    - _TessellationFactorMinDistance: 200
     - _TessellationFactorTriangleSize: 100
     - _TessellationMaxDisplacement: 0.01
-    - _TessellationMode: 0
+    - _TessellationMode: 1
     - _TessellationShapeFactor: 0.75
     - _TexWorldScale: 1
     - _TexWorldScaleEmissive: 1
@@ -302,10 +303,10 @@ Material:
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 0
-    - _amplitude1: 9.4
-    - _amplitude2: -10
-    - _amplitude3: 0.28
-    - _amplitude4: 0.53
+    - _amplitude1: 0.32
+    - _amplitude2: 1.27
+    - _amplitude3: 1.13
+    - _amplitude4: 1.6
     - _neighborDistance: 0
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
@@ -326,12 +327,12 @@ Material:
     - _UVMappingMask: {r: 1, g: 0, b: 0, a: 0}
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _Up_Color: {r: 0.20901565, g: 0.5720225, b: 0.5754717, a: 1}
-    - _direction1: {r: 3.3, g: 0, b: 1, a: 0}
-    - _direction2: {r: -0.58, g: 0, b: 0.12, a: 0}
-    - _direction3: {r: 1.17, g: 0, b: -0.35, a: 0}
-    - _direction4: {r: 1.63, g: 0, b: -3.56, a: 0}
+    - _direction1: {r: 2.98, g: 0, b: 1.7, a: 0}
+    - _direction2: {r: -2.71, g: 0, b: 0.37, a: 0}
+    - _direction3: {r: 0.42, g: 0, b: 0.24, a: 0}
+    - _direction4: {r: -2.75, g: 0, b: 2.48, a: 0}
     - _offset: {r: 0, g: 0, b: 0, a: 0}
     - _offset1: {r: 1.27, g: 0, b: 0, a: 0}
-    - _timeScales: {r: 1.76, g: 0.63, b: 1.09, a: 0.75}
+    - _timeScales: {r: 1.03, g: 0.75, b: 2.08, a: 0.82}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
