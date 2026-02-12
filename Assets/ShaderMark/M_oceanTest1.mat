@@ -302,8 +302,8 @@ Material:
     - _ZTestGBuffer: 4
     - _ZTestTransparent: 4
     - _ZWrite: 0
-    - _amplitude1: 1.45
-    - _amplitude2: 3.17
+    - _amplitude1: 9.4
+    - _amplitude2: -10
     - _amplitude3: 0.28
     - _amplitude4: 0.53
     - _neighborDistance: 0
@@ -327,11 +327,11 @@ Material:
     - _UVMappingMaskEmissive: {r: 1, g: 0, b: 0, a: 0}
     - _Up_Color: {r: 0.20901565, g: 0.5720225, b: 0.5754717, a: 1}
     - _direction1: {r: 1, g: 0, b: 1, a: 0}
-    - _direction2: {r: -0.31, g: 0, b: 0.5, a: 0}
+    - _direction2: {r: -0.58, g: 0, b: 0.12, a: 0}
     - _direction3: {r: 1.17, g: 0, b: -0.35, a: 0}
     - _direction4: {r: 1.63, g: 0, b: -3.56, a: 0}
     - _offset: {r: 0, g: 0, b: 0, a: 0}
     - _offset1: {r: 1.27, g: 0, b: 0, a: 0}
-    - _timeScales: {r: 0.54, g: 0.95, b: 1.09, a: 0.75}
+    - _timeScales: {r: 1.76, g: 0.63, b: 1.09, a: 0.75}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
