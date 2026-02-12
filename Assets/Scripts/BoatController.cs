@@ -105,7 +105,7 @@ public class BoatController : MonoBehaviour
 
             float velocityFactor = Mathf.Clamp01(boatRb.linearVelocity.magnitude / targetSpeed);
             float turnMultiplier = Mathf.Lerp(mode.modeMinTurnSpeed, 1f, velocityFactor);
-            boatRb.AddTorque(Vector3.up * (horizontal * mode.modeTurnSpeed * turnMultiplier)); //je l'ai commenté car je ne pouvais plus play
+            boatRb.AddTorque(Vector3.up * (horizontal * mode.modeTurnSpeed * turnMultiplier));
         }
         
     }

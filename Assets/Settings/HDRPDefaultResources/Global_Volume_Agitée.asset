@@ -899,7 +899,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.282
   smoothness:
     m_OverrideState: 1
     m_Value: 0.2
@@ -1394,7 +1394,7 @@ MonoBehaviour:
   active: 1
   rotation:
     m_OverrideState: 1
-    m_Value: 271
+    m_Value: 273
   skyIntensityMode:
     m_OverrideState: 1
     m_Value: 0
@@ -1543,10 +1543,10 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.4
   scatter:
     m_OverrideState: 1
-    m_Value: 0.7
+    m_Value: 0.346
   tint:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -2050,7 +2050,7 @@ MonoBehaviour:
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   tint:
     m_OverrideState: 1
-    m_Value: {r: 4.541205, g: 4.541205, b: 4.541205, a: 1}
+    m_Value: {r: 0.07661046, g: 0.05584788, b: 0.17159058, a: 1}
   maxFogDistance:
     m_OverrideState: 1
     m_Value: 257.7
@@ -2071,13 +2071,13 @@ MonoBehaviour:
     m_Value: 104.8
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 4991.4
+    m_Value: 150
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 0.5801887, g: 0.63701767, b: 1, a: 1}
+    m_Value: {r: 0.2761659, g: 0.31162426, b: 0.5471698, a: 1}
   globalLightProbeDimmer:
     m_OverrideState: 1
     m_Value: 1
@@ -2129,7 +2129,7 @@ MonoBehaviour:
   active: 1
   mode:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0
   meteringMode:
     m_OverrideState: 1
     m_Value: 2
@@ -2138,7 +2138,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 6.377551
   compensation:
     m_OverrideState: 1
     m_Value: 0
@@ -2461,13 +2461,13 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 2.79
   directLightingStrength:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.528
   radius:
     m_OverrideState: 1
-    m_Value: 1.5
+    m_Value: 2.71
   spatialBilateralAggressiveness:
     m_OverrideState: 1
     m_Value: 0.15
@@ -2607,7 +2607,7 @@ MonoBehaviour:
   interCascadeBorders: 1
   maxShadowDistance:
     m_OverrideState: 1
-    m_Value: 500
+    m_Value: 1000
   directionalTransmissionMultiplier:
     m_OverrideState: 1
     m_Value: 1
