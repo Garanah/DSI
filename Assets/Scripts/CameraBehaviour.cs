@@ -37,9 +37,9 @@ public class CameraBehaviour : MonoBehaviour
         if (target == null) return;
         if (boatController.currentMovementMode == CurrentMovementMode.Normal)
         {
-            Vector3 targetOffset = boatController.isSprinting ? sprintOffset : offset;
-            float targetSmoothFollow = boatController.isSprinting ? sprintSmoothFollow : smoothFollow;
-            float targetLookAtHeight = boatController.isSprinting ? sprintLookAtHeight : lookAtHeight;
+            Vector3 targetOffset = boatController.lookingRight ? sprintOffset : offset;
+            float targetSmoothFollow = boatController.lookingRight ? sprintSmoothFollow : smoothFollow;
+            float targetLookAtHeight = boatController.lookingRight ? sprintLookAtHeight : lookAtHeight;
         
             currentOffset = Vector3.Lerp(currentOffset, targetOffset, transitionSpeed * Time.deltaTime);
             currentSmoothFollow = Mathf.Lerp(currentSmoothFollow, targetSmoothFollow, transitionSpeed * Time.deltaTime);
@@ -53,11 +53,31 @@ public class CameraBehaviour : MonoBehaviour
         else if (boatController.currentMovementMode == CurrentMovementMode.Constant)
         {
             MovementModeSpeed mode =  boatController.movementModes[boatController.currentSelectedMovementMode];
+            Vector3 targetOffset;
+            float targetSmoothFollow;
+            float targetLookAtHeight;
+                
+            if (boatController.lookingRight)
+            {
+                 targetOffset = mode.modeCamSprintOffset;
+                 targetSmoothFollow = mode.modeCamSprintSmoothFollow;
+                 targetLookAtHeight = mode.modeCamSprintLookAtHeight;
+                
+            }
+            else if(boatController.lookingLeft)
+            {
+                 targetOffset = mode.leftShootOffset;
+                 targetSmoothFollow = mode.leftShootSmoothFollow;
+                 targetLookAtHeight = mode.leftShootLookAtHeight;
+            }
+            else
+            {
+                 targetOffset =  mode.modeCamOffset;
+                 targetSmoothFollow =  mode.modeCamSmoothFollow;
+                 targetLookAtHeight = mode.modeCamLookAtHeight;
+            }
             
-            Vector3 targetOffset = boatController.isSprinting ? mode.modeCamSprintOffset : mode.modeCamOffset;
-            float targetSmoothFollow = boatController.isSprinting ? mode.modeCamSprintSmoothFollow : mode.modeCamSmoothFollow;
-            float targetLookAtHeight = boatController.isSprinting ? mode.modeCamSprintLookAtHeight : mode.modeCamLookAtHeight;
-        
+            
             currentOffset = Vector3.Lerp(currentOffset, targetOffset, transitionSpeed * Time.deltaTime);
             currentSmoothFollow = Mathf.Lerp(currentSmoothFollow, targetSmoothFollow, transitionSpeed * Time.deltaTime);
             currentLookAtHeight = Mathf.Lerp(currentLookAtHeight, targetLookAtHeight, transitionSpeed * Time.deltaTime);
