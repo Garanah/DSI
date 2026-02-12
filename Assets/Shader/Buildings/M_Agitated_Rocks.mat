@@ -114,13 +114,13 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - _Bottom_Light_Color: {r: 0.62352943, g: 0.5176471, b: 0.34509805, a: 1}
-    - _Bottom_Shadow_Color: {r: 0.266453, g: 0.083659664, b: 0.3773585, a: 1}
+    - _Bottom_Light_Color: {r: 0.45283014, g: 0.34479713, b: 0.16874328, a: 1}
+    - _Bottom_Shadow_Color: {r: 0.06069775, g: 0.117619224, b: 0.41509432, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _Light_Color: {r: 1, g: 0.6968296, b: 0, a: 1}
     - _Shadow_Color: {r: 0.22219735, g: 0.21462256, b: 0.8584906, a: 1}
-    - _Top_Light_Color: {r: 0.6226415, g: 0.51640016, b: 0.34362763, a: 1}
+    - _Top_Light_Color: {r: 0.7169812, g: 0.64193004, b: 0.39569244, a: 1}
     - _Top_Shadow_Color: {r: 0.2966803, g: 0.38998622, b: 0.5566038, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

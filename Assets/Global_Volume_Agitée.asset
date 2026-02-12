@@ -1394,7 +1394,7 @@ MonoBehaviour:
   active: 1
   rotation:
     m_OverrideState: 1
-    m_Value: 273
+    m_Value: 255
   skyIntensityMode:
     m_OverrideState: 1
     m_Value: 0
@@ -1543,10 +1543,10 @@ MonoBehaviour:
     m_Value: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.4
+    m_Value: 0.447
   scatter:
     m_OverrideState: 1
-    m_Value: 0.346
+    m_Value: 0.605
   tint:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -2050,7 +2050,7 @@ MonoBehaviour:
     m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   tint:
     m_OverrideState: 1
-    m_Value: {r: 0.07661046, g: 0.05584788, b: 0.17159058, a: 1}
+    m_Value: {r: 0.07618539, g: 0.056128494, b: 0.17144115, a: 1}
   maxFogDistance:
     m_OverrideState: 1
     m_Value: 257.7
@@ -2077,7 +2077,7 @@ MonoBehaviour:
     m_Value: 1
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 0.2761659, g: 0.31162426, b: 0.5471698, a: 1}
+    m_Value: {r: 0.27450982, g: 0.30980393, b: 0.54901963, a: 1}
   globalLightProbeDimmer:
     m_OverrideState: 1
     m_Value: 1
@@ -2138,7 +2138,7 @@ MonoBehaviour:
     m_Value: 1
   fixedExposure:
     m_OverrideState: 1
-    m_Value: 6.377551
+    m_Value: 6.9965987
   compensation:
     m_OverrideState: 1
     m_Value: 0
