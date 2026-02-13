@@ -86,6 +86,7 @@ public class MooringTrigger : MonoBehaviour
     {
         if (boat != null && isMooringActive)
         {
+            Debug.Log("Mooring has been activated");
             boat.ResumeBoat();
             isMooringActive = false;
 
